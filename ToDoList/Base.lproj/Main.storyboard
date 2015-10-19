@@ -27,6 +27,9 @@
                                 <rect key="frame" x="524" y="28" width="56" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="addButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L5R-eF-Z9C"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lfg-E6-1BA">
                                 <rect key="frame" x="44" y="78" width="536" height="502"/>
@@ -48,6 +51,10 @@
                             <constraint firstItem="Lfg-E6-1BA" firstAttribute="top" secondItem="uB5-ht-OM8" secondAttribute="bottom" constant="19" id="syx-vC-MaA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemTextField" destination="uB5-ht-OM8" id="VhI-68-fMB"/>
+                        <outlet property="tableView" destination="Lfg-E6-1BA" id="5Qn-h4-EZ3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

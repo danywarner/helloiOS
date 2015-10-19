@@ -14,6 +14,7 @@
 		6542FC1D1BD0970B00FF0782 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6542FC1B1BD0970B00FF0782 /* LaunchScreen.storyboard */; };
 		6542FC281BD0970C00FF0782 /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6542FC271BD0970C00FF0782 /* ToDoListTests.swift */; };
 		6542FC331BD0970C00FF0782 /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6542FC321BD0970C00FF0782 /* ToDoListUITests.swift */; };
+		655D64581BD5B1A20000094F /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D64571BD5B1A20000094F /* TodoList.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6542FC2E1BD0970C00FF0782 /* ToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6542FC321BD0970C00FF0782 /* ToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListUITests.swift; sourceTree = "<group>"; };
 		6542FC341BD0970C00FF0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		655D64571BD5B1A20000094F /* TodoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				6542FC121BD0970B00FF0782 /* AppDelegate.swift */,
 				6542FC141BD0970B00FF0782 /* ViewController.swift */,
+				655D64571BD5B1A20000094F /* TodoList.swift */,
 				6542FC161BD0970B00FF0782 /* Main.storyboard */,
 				6542FC191BD0970B00FF0782 /* Assets.xcassets */,
 				6542FC1B1BD0970B00FF0782 /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655D64581BD5B1A20000094F /* TodoList.swift in Sources */,
 				6542FC151BD0970B00FF0782 /* ViewController.swift in Sources */,
 				6542FC131BD0970B00FF0782 /* AppDelegate.swift in Sources */,
 			);
@@ -488,6 +492,7 @@
 				6542FC391BD0970C00FF0782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6542FC3A1BD0970C00FF0782 /* Build configuration list for PBXNativeTarget "ToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				6542FC3C1BD0970C00FF0782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6542FC3D1BD0970C00FF0782 /* Build configuration list for PBXNativeTarget "ToDoListUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				6542FC3F1BD0970C00FF0782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
