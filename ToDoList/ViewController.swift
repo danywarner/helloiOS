@@ -47,6 +47,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedItem = self.todoList.getItem(indexPath.row)
         self.performSegueWithIdentifier("showItem", sender: self)
+       /* let detailVC = DetailViewController()
+        detailVC.item = self.selectedItem
+        self.navigationController?.pushViewController(detailVC, animated: true)*/
         
     }
     

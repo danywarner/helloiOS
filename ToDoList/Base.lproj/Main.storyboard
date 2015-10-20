@@ -3,6 +3,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Lista de tareas-->
@@ -76,9 +77,92 @@
                     <view key="view" contentMode="scaleToFill" id="hAI-dV-w0Q">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Lsc-P2-ZCN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="i8G-Dz-toU">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarea:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gta-Ip-qSs">
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="150"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71x-lw-Mub">
+                                                <rect key="frame" x="304" y="0.0" width="296" height="150"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FQB-DH-emd">
+                                        <rect key="frame" x="0.0" y="150" width="600" height="150"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DE0-RG-Tvl">
+                                                <rect key="frame" x="0.0" y="0.0" width="296" height="150"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sin Fecha" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFf-13-Le5">
+                                                <rect key="frame" x="304" y="0.0" width="296" height="150"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                    </stackView>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.76633179229366022" blue="0.13419454596292668" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="y35-iH-1U2"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="y35-iH-1U2"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="NYU-EB-W7q">
+                                <rect key="frame" x="5" y="364" width="600" height="216"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="qbq-pw-5yR"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="467045115.11216402">
+                                    <!--2015-10-20 14:45:15 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="dateSelected:" destination="NGw-lG-A13" eventType="valueChanged" id="8q5-ru-mxL"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Lsc-P2-ZCN" secondAttribute="trailing" id="39H-pq-o2z"/>
+                            <constraint firstItem="Lsc-P2-ZCN" firstAttribute="height" secondItem="hAI-dV-w0Q" secondAttribute="height" multiplier="0.5" id="5RZ-wt-0zZ"/>
+                            <constraint firstItem="NYU-EB-W7q" firstAttribute="top" secondItem="Lsc-P2-ZCN" secondAttribute="bottom" id="5YS-t7-8Ed"/>
+                            <constraint firstAttribute="trailing" secondItem="NYU-EB-W7q" secondAttribute="trailing" id="7zb-jT-ajF"/>
+                            <constraint firstItem="Lsc-P2-ZCN" firstAttribute="top" secondItem="3z7-oY-aHb" secondAttribute="bottom" id="92e-DF-skT"/>
+                            <constraint firstItem="Lsc-P2-ZCN" firstAttribute="leading" secondItem="hAI-dV-w0Q" secondAttribute="leading" id="RCd-n9-1O8"/>
+                            <constraint firstItem="NYU-EB-W7q" firstAttribute="leading" secondItem="hAI-dV-w0Q" secondAttribute="leading" id="dFP-4J-WmU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="dFf-13-Le5" id="EFS-ay-Adh"/>
+                        <outlet property="descriptionLabel" destination="71x-lw-Mub" id="sqI-7O-hLx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDf-Ub-6D7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
