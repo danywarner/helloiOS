@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     @IBOutlet weak var itemTextField:UITextField!
     @IBOutlet weak var tableView:UITableView!
     let todoList = TodoList()
-    var selectedItem: String?
+    var selectedItem: TodoItem?
     
     static let MAX_TEXT_SIZE = 50
     
@@ -20,7 +20,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     
     @IBAction func addButtonPressed(sender: UIButton){
         print("agregando un elemento a la lista: \(itemTextField.text)")
-        todoList.addItem(itemTextField.text!)
+        let todoItem = TodoItem()
+        todoItem.todo = itemTextField.text
+        todoList.addItem(todoItem)
         tableView.reloadData()
         self.itemTextField.text = nil
         self.itemTextField?.resignFirstResponder()
@@ -54,8 +56,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let DetailViewController = segue.destinationViewController as? DetailViewController {
-            DetailViewController.item = self.selectedItem
+        if let detailViewController = segue.destinationViewController as? DetailViewController {
+            detailViewController.item = self.selectedItem
+            detailViewController.todoList = self.todoList
         }
     }
 

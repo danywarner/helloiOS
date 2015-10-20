@@ -16,6 +16,7 @@
 		6542FC331BD0970C00FF0782 /* ToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6542FC321BD0970C00FF0782 /* ToDoListUITests.swift */; };
 		655D64581BD5B1A20000094F /* TodoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D64571BD5B1A20000094F /* TodoList.swift */; settings = {ASSET_TAGS = (); }; };
 		655D645A1BD5E8980000094F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D64591BD5E8980000094F /* DetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		655D645C1BD6B3880000094F /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655D645B1BD6B3880000094F /* TodoItem.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6542FC341BD0970C00FF0782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		655D64571BD5B1A20000094F /* TodoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoList.swift; sourceTree = "<group>"; };
 		655D64591BD5E8980000094F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		655D645B1BD6B3880000094F /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TodoItem.swift; path = ../TodoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				6542FC121BD0970B00FF0782 /* AppDelegate.swift */,
 				6542FC141BD0970B00FF0782 /* ViewController.swift */,
 				655D64571BD5B1A20000094F /* TodoList.swift */,
+				655D645B1BD6B3880000094F /* TodoItem.swift */,
 				6542FC161BD0970B00FF0782 /* Main.storyboard */,
 				6542FC191BD0970B00FF0782 /* Assets.xcassets */,
 				6542FC1B1BD0970B00FF0782 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				655D645C1BD6B3880000094F /* TodoItem.swift in Sources */,
 				655D64581BD5B1A20000094F /* TodoList.swift in Sources */,
 				6542FC151BD0970B00FF0782 /* ViewController.swift in Sources */,
 				6542FC131BD0970B00FF0782 /* AppDelegate.swift in Sources */,
