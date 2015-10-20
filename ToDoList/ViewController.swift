@@ -12,8 +12,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     @IBOutlet weak var itemTextField:UITextField!
     @IBOutlet weak var tableView:UITableView!
     let todoList = TodoList()
+    var selectedItem: String?
     
     static let MAX_TEXT_SIZE = 50
+    
+    
     
     @IBAction func addButtonPressed(sender: UIButton){
         print("agregando un elemento a la lista: \(itemTextField.text)")
@@ -42,7 +45,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedItem = self.todoList.getItem(indexPath.row)
         self.performSegueWithIdentifier("showItem", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let DetailViewController = segue.destinationViewController as? DetailViewController {
+            DetailViewController.item = self.selectedItem
+        }
     }
 
     //MARK: TextFieldDelegate Methods

@@ -65,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="345" y="310"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="AdF-vI-m90">
             <objects>
-                <viewController id="NGw-lG-A13" sceneMemberID="viewController">
+                <viewController id="NGw-lG-A13" customClass="DetailViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3z7-oY-aHb"/>
                         <viewControllerLayoutGuide type="bottom" id="WHu-r4-x2r"/>
