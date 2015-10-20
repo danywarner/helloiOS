@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var item: String?
 
@@ -17,6 +17,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func addNotification(sender: UIBarButtonItem) {
         if let dateString = self.dateLabel.text {
@@ -49,19 +51,22 @@ class DetailViewController: UIViewController {
     }
     
     func toggleDatePicker() {
+        self.imageView.hidden = self.datePicker.hidden
         self.datePicker.hidden = !self.datePicker.hidden
     }
 
     @IBAction func dateSelected(sender: UIDatePicker) {
         //print("fecha seleccionada \(sender.date)")
         self.dateLabel.text = formatDate(sender.date)
-        self.datePicker.hidden = true
+       // self.datePicker.hidden = true
+        toggleDatePicker()
     }
     
     @IBAction func addImage(sender: UIBarButtonItem) {
         let imagePickerController = UIImagePickerController()
-        imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
-       // imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        //imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagePickerController.delegate = self
         self.presentViewController(imagePickerController, animated: true, completion: nil)
     }
     
@@ -83,6 +88,14 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Image Picker controller methods
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            self.imageView.image = image
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
 
 }

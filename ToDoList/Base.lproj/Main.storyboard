@@ -198,6 +198,7 @@
                         <outlet property="dateLabel" destination="dFf-13-Le5" id="EFS-ay-Adh"/>
                         <outlet property="datePicker" destination="NYU-EB-W7q" id="a3a-e2-wdG"/>
                         <outlet property="descriptionLabel" destination="71x-lw-Mub" id="sqI-7O-hLx"/>
+                        <outlet property="imageView" destination="wNQ-qq-N25" id="Z21-EJ-aco"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MDf-Ub-6D7" userLabel="First Responder" sceneMemberID="firstResponder"/>
