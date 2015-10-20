@@ -16,6 +16,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBAction func addNotification(sender: UIBarButtonItem) {
         if let dateString = self.dateLabel.text {
             if let date = parseDate(dateString) {
@@ -38,13 +40,31 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         print("item \(item)")
         self.descriptionLabel.text=item
-        // Do any additional setup after loading the view.
+        let tapGestureRecognizer = UITapGestureRecognizer()
+        tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+        tapGestureRecognizer.addTarget(self, action: "toggleDatePicker")
+        self.dateLabel.addGestureRecognizer(tapGestureRecognizer)
+        self.dateLabel.userInteractionEnabled = true
+    }
+    
+    func toggleDatePicker() {
+        self.datePicker.hidden = !self.datePicker.hidden
     }
 
     @IBAction func dateSelected(sender: UIDatePicker) {
         //print("fecha seleccionada \(sender.date)")
         self.dateLabel.text = formatDate(sender.date)
+        self.datePicker.hidden = true
     }
+    
+    @IBAction func addImage(sender: UIBarButtonItem) {
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+       // imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        self.presentViewController(imagePickerController, animated: true, completion: nil)
+    }
+    
     
     func formatDate(date: NSDate) -> String {
         let formatter = NSDateFormatter()
@@ -63,15 +83,6 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
