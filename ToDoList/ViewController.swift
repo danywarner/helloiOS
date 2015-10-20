@@ -40,6 +40,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate
     func scrollViewDidScroll(scrollView: UIScrollView) {
         self.itemTextField?.resignFirstResponder()
     }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier("showItem", sender: self)
+    }
 
     //MARK: TextFieldDelegate Methods
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
