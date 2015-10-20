@@ -159,6 +159,13 @@
                             <constraint firstItem="NYU-EB-W7q" firstAttribute="leading" secondItem="hAI-dV-w0Q" secondAttribute="leading" id="dFP-4J-WmU"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="vop-d0-Ox9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="zSs-c7-pAz">
+                            <connections>
+                                <action selector="addNotification:" destination="NGw-lG-A13" id="zT5-gk-yZK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="dateLabel" destination="dFf-13-Le5" id="EFS-ay-Adh"/>
                         <outlet property="descriptionLabel" destination="71x-lw-Mub" id="sqI-7O-hLx"/>
