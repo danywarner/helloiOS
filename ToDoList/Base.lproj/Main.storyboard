@@ -21,7 +21,10 @@
                                 <rect key="frame" x="44" y="29" width="466" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fxT-Wp-Tyh"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGq-6g-1QH">
                                 <rect key="frame" x="524" y="28" width="56" height="30"/>

@@ -8,15 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate, UITextFieldDelegate {
     @IBOutlet weak var itemTextField:UITextField!
     @IBOutlet weak var tableView:UITableView!
     let todoList = TodoList()
+    
+    static let MAX_TEXT_SIZE = 50
     
     @IBAction func addButtonPressed(sender: UIButton){
         print("agregando un elemento a la lista: \(itemTextField.text)")
         todoList.addItem(itemTextField.text!)
         tableView.reloadData()
+        self.itemTextField.text = nil
         self.itemTextField?.resignFirstResponder()
     }
     
@@ -38,6 +41,16 @@ class ViewController: UIViewController, UITableViewDelegate {
         self.itemTextField?.resignFirstResponder()
     }
 
+    //MARK: TextFieldDelegate Methods
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if let tareaString = textField.text as? NSString {
+            let updatedString = tareaString.stringByReplacingCharactersInRange(range, withString: string)
+            return updatedString.characters.count <= ViewController.MAX_TEXT_SIZE
+        }
+        else{
+            return true
+        }
+    }
 
 }
 
